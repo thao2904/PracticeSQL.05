@@ -56,3 +56,8 @@ GROUP BY a.product_name
 HAVING SUM(b.unit) >= 100
 
 --Practice07:
+SELECT a.page_id FROM pages AS a 
+LEFT JOIN page_likes AS b
+ON a.page_id = b.page_id
+WHERE b.page_id is NULL
+ORDER BY a.page_id
